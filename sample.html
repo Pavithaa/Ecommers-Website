@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input Test</title>
+    <style>
+        /* Ensure arrows are always visible in WebKit browsers */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          opacity: 1 !important; /* Adding !important to force priority */
+          -webkit-appearance: none !important; /* Ensure default appearance is overridden if set to none */
+          margin: 0; /* Important to prevent extra space */
+        }
+
+        /* Ensure default appearance in Firefox */
+        input[type=number] {
+            -moz-appearance: textfield !important; /* Adding !important */
+        }
+
+        /* Basic styling for visibility */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        input[type=number] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Input Test</h1>
+
+    <label for="testQuantity">Test Quantity:</label>
+    <input type="number" id="testQuantity" name="testQuantity" value="1" min="0" max="100">
+
+    <p>
+        * In Chrome/Edge/Safari, hover your mouse over the input to see the arrows.
+        <br>
+        * In Firefox, the arrows should be visible by default.
+    </p>
+</body>
+</html>
